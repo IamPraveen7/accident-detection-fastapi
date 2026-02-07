@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+jinja2
+python-dotenv
+sendgrid
+
+numpy
+opencv-python-headless
+tensorflow-cpu
