@@ -1,10 +1,9 @@
 fastapi
 uvicorn[standard]
-python-multipart
 jinja2
+python-multipart
+opencv-python-headless
+numpy
+tensorflow-cpu
 python-dotenv
 sendgrid
-
-numpy
-opencv-python-headless
-tensorflow-cpu
