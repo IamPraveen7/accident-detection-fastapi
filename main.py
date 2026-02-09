@@ -10,7 +10,7 @@ import numpy as np
 # ---------------- ENV ----------------
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-from tflite_runtime.interpreter import Interpreter
+from tensorflow import tf
 
 from fastapi import (
     FastAPI,
@@ -37,7 +37,7 @@ INPUT_SIZE = (180, 180)
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # ---------------- MODEL ----------------
-interpreter = Interpreter(model_path="accident_detection_model.tflite")
+interpreter = tf.lite.Interpreter(model_path="accident_detection_model.tflite")
 
 # ---------------- FASTAPI ----------------
 app = FastAPI()
