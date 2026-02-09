@@ -7,6 +7,9 @@ import json
 
 import cv2
 import numpy as np
+# ---------------- ENV ----------------
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 import tensorflow as tf
 
 from fastapi import (
@@ -25,9 +28,6 @@ from dotenv import load_dotenv
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
-# ---------------- ENV ----------------
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 load_dotenv()
 
 MAX_FILE_SIZE = 25 * 1024 * 1024  # 25MB
