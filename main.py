@@ -31,7 +31,7 @@ from sendgrid.helpers.mail import Mail
 load_dotenv()
 
 MAX_FILE_SIZE = 25 * 1024 * 1024  # 25MB
-UPLOAD_FOLDER = "/static/videos"
+UPLOAD_FOLDER = "static/videos"
 INPUT_SIZE = (180, 180)
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -42,7 +42,7 @@ interpreter = Interpreter(model_path="accident_detection_model.tflite")
 # ---------------- FASTAPI ----------------
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
-app.mount("./static", StaticFiles(directory="static"), name="static")
+app.mount("static", StaticFiles(directory="static"), name="static")
 
 
 @app.get("/", response_class=HTMLResponse)
