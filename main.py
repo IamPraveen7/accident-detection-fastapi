@@ -10,7 +10,7 @@ import numpy as np
 # ---------------- ENV ----------------
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-from tensorflow import tf
+import tensorflow as tf
 
 from fastapi import (
     FastAPI,
